@@ -1,4 +1,4 @@
-package org.learning.synchronization.AdderSubtractor;
+package org.learning.synchronization.AdderSubtractorSync;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -21,7 +21,7 @@ public class Main {
         t1.start();
         t2.start();
 
-        t1.join();
+        t1.join();//wait for the thread to complete it's execution
         t2.join();
 
         System.out.println(count.value);

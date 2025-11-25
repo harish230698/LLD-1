@@ -1,4 +1,4 @@
-package org.learning.synchronization.AdderSubtractor;
+package org.learning.synchronization.AdderSubtractorSyncMethod;
 
 import java.util.concurrent.locks.Lock;
 
@@ -6,18 +6,14 @@ public class Adder implements  Runnable{
 
     private Count count;
 
-    private Lock lock;
-
-    Adder(Count count,Lock lock){
+    Adder(Count count){
         this.count=count;
-        this.lock=lock;
     }
+
     @Override
     public void run() {
         for(int i=1;i<=100000;i++){
-            lock.lock();
-            count.value+=i;
-            lock.unlock();
+            count.addValue(i);
         }
     }
 }
