@@ -15,22 +15,21 @@ public class Pair<T,U> {
     }
 
     public void addkeyvalue(T key,U value){
-        this.key=key;
-        this.value=value;
+        key=key;
+        value=value;
     }
 
     public U getValue(T key){
-        return this.value;
+        return value;
     }
 
     public static void main(String[] args) {
 
-        Pair<Integer,String> p1 = new Pair<>();
-        p1.addkeyvalue(1,"Harish");
-        p1.addkeyvalue(2,"Hans");
+        Pair<Integer,String> p1 = new Pair<>(1,"Harish");
+
 
         System.out.println(p1.getValue(1));
-        System.out.println(p1.getValue(2));
+//        System.out.println(p1.getValue(2));
 
     }
 }
