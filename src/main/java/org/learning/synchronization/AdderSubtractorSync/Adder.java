@@ -4,9 +4,9 @@ import java.util.concurrent.locks.Lock;
 
 public class Adder implements  Runnable{
 
-    private Count count;
+    private final Count count;
 
-    private Lock lock;
+    private final Lock lock;
 
     Adder(Count count, Lock lock){
         this.count=count;

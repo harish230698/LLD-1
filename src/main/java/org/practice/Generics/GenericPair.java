@@ -2,8 +2,8 @@ package org.practice.Generics;
 
 public class GenericPair<K,V> {
 
-    private K first;
-    private V second;
+    private final K first;
+    private final V second;
 
 
     public GenericPair(K first, V second) {

@@ -4,7 +4,7 @@ import java.util.concurrent.locks.Lock;
 
 public class Subtractor implements Runnable{
 
-    private Count count;
+    private final Count count;
 
 
     Subtractor(Count count){

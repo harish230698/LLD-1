@@ -4,7 +4,7 @@ import java.util.concurrent.locks.Lock;
 
 public class Adder implements  Runnable{
 
-    private Count count;
+    private final Count count;
 
     Adder(Count count){
         this.count=count;
