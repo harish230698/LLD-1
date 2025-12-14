@@ -1,7 +1,10 @@
 package org.learning.streams;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
+import java.util.StringTokenizer;
 import java.util.stream.Stream;
 
 public class EasyStreamsProblems {
@@ -9,6 +12,7 @@ public class EasyStreamsProblems {
     public static void main(String[] args) {
 
         Stream<Integer> streamIterated = Stream.iterate(40, n -> n + 2).limit(20);
+
 
 //        streamIterated.forEach(System.out::println);
 
